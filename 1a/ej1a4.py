@@ -35,8 +35,11 @@ Exemple:
 
 def count_vowels(text_chain:str):
     # Write here your code
-    pass
-
+    total = 0
+    for letter in text_chain:
+        if letter.lower() == "a" or letter.lower() == "e" or letter.lower() == "i" or letter.lower() == "o" or letter.lower() == "u":
+            total += 1
+    return total
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(count_vowels("Hello world, this is an example."))
+print(count_vowels("Hello world, this is an example."))
