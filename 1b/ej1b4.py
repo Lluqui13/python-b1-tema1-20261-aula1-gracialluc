@@ -46,7 +46,7 @@ Pots consultar la referència de la llibreria 'Numpy' en el següent enllaç:
 https://numpy.org/doc/stable/reference/index.html#reference
 
 En concret, et recomanem que consultis:
-* https://numpy.org/doc/stable/reference/generated/numpy.mean.html
+*   
 * https://numpy.org/doc/stable/reference/generated/numpy.std.html#numpy.std
 
 Paràmetre:
@@ -65,9 +65,12 @@ Exemple:
 import numpy as np
 
 def results(list_numbers):
-    # Write here your code
-    pass
+    average = round(np.mean(list_numbers),2)
+    sdeviation = round(np.std(list_numbers),2)
+    print(f"Average: {average}")
+    print(f"Standard deviation: {sdeviation}")
+    return average, sdeviation
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])
+results([1, 2, 10, -5, 0, 9.55, 74.825, 55, 8, 42])
